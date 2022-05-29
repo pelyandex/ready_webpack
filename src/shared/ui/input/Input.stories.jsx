@@ -15,5 +15,5 @@ export const Input = args => <ProjectInput data-testid="input" {...args} />;
 Input.play = ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const loginButton = canvas.getByTestId("input");
-  userEvent.type(loginButton, "asd");
+  userEvent.type(loginButton, "hey, how're u ?");
 };

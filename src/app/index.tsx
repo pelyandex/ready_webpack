@@ -1,17 +1,19 @@
-import { render } from "react-dom";
-import { hot } from "react-hot-loader/root";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import { StoreProvider, rootStore } from "../models";
 import { App } from "./app";
 
-const HotApp = hot(App);
+const container = document.getElementById("root");
 
-render(
-  <BrowserRouter>
-    <StoreProvider value={rootStore}>
-      <HotApp />
-    </StoreProvider>
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+if (container) {
+  const root = createRoot(container);
+
+  root.render(
+    <BrowserRouter>
+      <StoreProvider value={rootStore}>
+        <App />
+      </StoreProvider>
+    </BrowserRouter>
+  );
+}

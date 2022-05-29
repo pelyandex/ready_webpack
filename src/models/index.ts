@@ -1,6 +1,5 @@
 import { types, Instance } from "mobx-state-tree";
 import { createContext, useContext } from "react";
-import { connectReduxDevtools } from "mst-middlewares";
 
 export const root = types
   .model({
@@ -26,7 +25,11 @@ interface IRootStore extends Instance<typeof root> {}
 const StoreContext = createContext<IRootStore>({} as IRootStore);
 
 export const rootStore = root.create();
-connectReduxDevtools(require("remotedev"), rootStore);
+
+if (process.env.NODE_ENV === "development") {
+  const { connectReduxDevtools } = require("mst-middlewares");
+  connectReduxDevtools(require("remotedev"), rootStore);
+}
 
 export const useStore = () => useContext(StoreContext);
 export const StoreProvider = StoreContext.Provider;

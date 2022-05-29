@@ -10,11 +10,6 @@ module.exports = {
   output: {
     filename: "[name].js"
   },
-  resolve: {
-    alias: {
-      "react-dom": "@hot-loader/react-dom"
-    }
-  },
   optimization: {
     chunkIds: "named",
     usedExports: false,

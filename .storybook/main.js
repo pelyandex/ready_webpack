@@ -4,7 +4,7 @@ module.exports = {
   webpackFinal: async config => {
     return {
       ...config,
-      module: { ...config.module, rules: custom().module.rules }
+      module: { ...config.module, rules: custom("production").module.rules }
     };
   },
   stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],

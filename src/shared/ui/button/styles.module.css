@@ -1,0 +1,16 @@
+.button {
+  color: var(--brand-color-normal);
+  font-size: 14px;
+}
+.button:global(.ant-btn:hover) {
+  border-color: transparent;
+  color: var(--link-color);
+  background-color: var(--brand-color-superlight);
+}
+.button:global(.ant-btn-primary) {
+  color: var(--text-color-white);
+}
+.button:global(.ant-btn-primary:hover) {
+  color: var(--text-color-white);
+  background-color: var(--brand-color-dark);
+}

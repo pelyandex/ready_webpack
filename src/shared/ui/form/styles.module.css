@@ -1,0 +1,11 @@
+.form {
+}
+.formItem {
+  position: relative;
+  & .optional {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--text-color-gray);
+  }
+}

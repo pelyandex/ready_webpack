@@ -5,7 +5,7 @@ import { Input } from "@shared/ui";
 import { useStore } from "../models";
 
 export const App = observer(() => {
-  const { toggle, auth } = useStore();
+  const { toggle, auth, temp } = useStore();
   const onChange = (e: any) => {
     toggle(e.target.value);
   };
@@ -13,6 +13,7 @@ export const App = observer(() => {
   return (
     <div>
       <span>{auth}</span>
+      <span>{temp}</span>
       <Input onChange={onChange} />
     </div>
   );

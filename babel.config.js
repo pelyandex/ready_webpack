@@ -36,10 +36,12 @@ module.exports = {
         libraryDirectory: "",
         camel2DashComponentName: false
       }
-    ],
-    ["react-hot-loader/babel"]
+    ]
   ],
   env: {
+    development: {
+      plugins: ["react-hot-loader/babel"]
+    },
     test: {
       plugins: ["@babel/plugin-transform-modules-commonjs"]
     }

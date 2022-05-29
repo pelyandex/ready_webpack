@@ -3,6 +3,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const plugins = [new ForkTsCheckerWebpackPlugin()];
 
 module.exports = {
+  entry: ["react-hot-loader/patch"],
   mode: "development",
   devtool: "source-map",
   plugins,

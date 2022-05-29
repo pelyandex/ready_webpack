@@ -106,7 +106,7 @@ const modules = {
 };
 
 module.exports = {
-  entry: ["react-hot-loader/patch", "./src/index.ts"],
+  entry: ["./src/index.ts"],
   module: modules,
   plugins,
   output: {

@@ -1,4 +1,5 @@
 import { observer } from "mobx-react-lite";
+
 import { Input } from "@shared/ui";
 
 import { useStore } from "../models";

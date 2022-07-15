@@ -24,6 +24,7 @@
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       },
+      "webpack": {},
       "typescript": {
         "paths": "./tsconfig.json",
         "alwaysTryTypes": true

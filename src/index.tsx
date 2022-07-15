@@ -1,8 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import { StoreProvider, rootStore } from "./models";
-import { App } from "./app/app";
+import { Index } from "./app";
 
 const container = document.getElementById("root");
 
@@ -11,10 +10,7 @@ if (container) {
 
   root.render(
     <BrowserRouter>
-      <StoreProvider value={rootStore}>
-        <App />
-      </StoreProvider>
+      <Index />
     </BrowserRouter>
   );
 }
- 

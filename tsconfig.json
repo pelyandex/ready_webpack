@@ -11,7 +11,10 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "paths": {
-      "@shared/*": ["./src/shared/*"]
+      "@shared/*": ["./src/shared/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@features/*": ["./src/features/*"],
+      "@models/*": ["./src/models/*"]
     }
   }
 }

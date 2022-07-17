@@ -19,7 +19,7 @@ const isSemiBuild = process.env.NODE_ENV === "semi-build";
 const getPlugins = () => {
   let plugins = [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/public/index.html")
+      template: path.resolve(__dirname, "./public/index.html")
     }),
     new DefinePlugin({
       __DEV__: isDev

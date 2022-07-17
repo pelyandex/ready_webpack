@@ -28,7 +28,12 @@ export const names = {
   view: "view",
   userPlaceholder: "userPlaceholder",
   lock: "lock",
-  more: "more"
+  more: "more",
+  run: "run",
+  rerun: "rerun",
+  stop: "stop",
+  data_source: "data_source",
+  shape_other: "shape_other"
 };
 //   "file",
 //   "iSymbol",

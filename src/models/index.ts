@@ -3,23 +3,13 @@ import { createContext, useContext } from "react";
 
 export const root = types
   .model({
-    auth: "as",
-    asd: "asd"
+    projectStatus: "stopped"
   })
-  .views(() => ({
-    get temp() {
-      return "123";
+  .actions(self => ({
+    setProjectStatus: (value: string) => {
+      self.projectStatus = value;
     }
-  }))
-  .actions(self => {
-    const toggle = (value: string) => {
-      self.auth = value;
-    };
-
-    return {
-      toggle
-    };
-  });
+  }));
 
 interface IRootStore extends Instance<typeof root> {}
 const StoreContext = createContext<IRootStore>({} as IRootStore);

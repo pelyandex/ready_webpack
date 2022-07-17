@@ -14,7 +14,8 @@
       "@shared/*": ["./src/shared/*"],
       "@entities/*": ["./src/entities/*"],
       "@features/*": ["./src/features/*"],
-      "@models/*": ["./src/models/*"]
+      "@models/*": ["./src/models/*"],
+      "@pages/*": ["./src/pages/*"]
     }
   }
 }

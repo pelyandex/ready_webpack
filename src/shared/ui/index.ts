@@ -9,3 +9,7 @@ export { Badge } from "./badge";
 export { NavMenu } from "./navmenu";
 export { Modal } from "./modal";
 export { Icon, Sprite } from "./icons";
+export { Collapse } from "./collapse";
+export { Menu } from "./menu";
+export { Dropdown } from "./dropdown";
+export { Divider } from "./divider";

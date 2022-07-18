@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { Handle, Position } from "react-flow-renderer";
 
 import { Dropdown, Icon, Menu } from "@shared/ui";
 
 import { JupiterModal } from "./JupiterModal";
-import { useState } from "react";
 
 const menu = (
   <Menu
@@ -53,8 +53,8 @@ export function Jupiter(data: any) {
   }
 
   const openEditor = () => {
-    setEditorVisible(!editorVisible)
-  }
+    setEditorVisible(!editorVisible);
+  };
 
   return (
     <>
@@ -77,7 +77,7 @@ export function Jupiter(data: any) {
           >
             <span style={{ fontSize: 10 }}>Jupiter notebook</span>
             <span style={{ fontSize: 8, color: "grey" }}>Docker</span>
-            <span style={{ color: color }}>
+            <span style={{ color }}>
               <Icon
                 style={{ marginTop: "10" }}
                 width={25}

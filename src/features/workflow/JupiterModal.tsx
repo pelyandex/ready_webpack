@@ -1,15 +1,14 @@
 import Editor from "@monaco-editor/react";
-
 import { Button, Modal } from "@shared/ui";
 
 const Footer = [
-  <Button size="large" key="run" type="primary">
+  <Button key="run" size="large" type="primary">
     RUN
   </Button>,
-  <Button size="large" key="save" type="primary">
+  <Button key="save" size="large" type="primary">
     SAVE
   </Button>,
-  <Button size="large" key="cancel">
+  <Button key="cancel" size="large">
     CANCEL
   </Button>
 ];

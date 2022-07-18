@@ -1,4 +1,4 @@
-import { types, Instance } from "mobx-state-tree";
+import { Instance, types } from "mobx-state-tree";
 import { createContext, useContext } from "react";
 
 export const root = types

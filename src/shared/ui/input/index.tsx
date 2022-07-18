@@ -1,7 +1,6 @@
-import { FC } from "react";
-import { Input as AntdInput } from "antd";
-
 import type { InputProps } from "antd";
+import { Input as AntdInput } from "antd";
+import { FC } from "react";
 
 interface IInput extends FC<InputProps> {
   TextArea: typeof AntdInput.TextArea;

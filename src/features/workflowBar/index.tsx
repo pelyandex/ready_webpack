@@ -1,11 +1,11 @@
+import { Cascader } from "antd";
+import { observer } from "mobx-react-lite";
+
 import {
   LeftCircleOutlined,
   PlayCircleOutlined,
   StopOutlined
 } from "@ant-design/icons";
-import { Cascader } from "antd";
-import { observer } from "mobx-react-lite";
-
 import { useStore } from "@models/index";
 
 import s from "./styles.module.css";
@@ -57,9 +57,13 @@ export const WorkflowBar = observer(() => {
             }
           ]}
         >
-          <span className={s.menuItem}>PROJECT</span>
+          <span id="menu_item" className={s.menuItem}>
+            PROJECT
+          </span>
         </Cascader>
-        <span className={s.menuItem}>SETTINGS</span>
+        <span id="menu_item" className={s.menuItem}>
+          SETTINGS
+        </span>
       </div>
       <div className={s.title}>
         <span className={s.dropdownText} onClick={e => e.preventDefault()}>

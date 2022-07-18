@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import type { ModalProps } from "antd";
 import { Modal as AntdModal } from "antd";
+import React, { FC } from "react";
 
-import s from "./styles.module.css";
 import { Button } from "../button";
 
-import type { ModalProps } from "antd";
+import s from "./styles.module.css";
 
 interface IModalProps extends ModalProps {
   danger?: boolean;
@@ -13,15 +13,15 @@ interface IModalProps extends ModalProps {
 export const Modal: FC<IModalProps> = props => {
   const Footer = [
     <Button
+      key="save"
       danger={props.danger}
       onClick={props.onOk}
       size="large"
-      key="save"
       type="primary"
     >
       {props.okText || "SAVE"}
     </Button>,
-    <Button onClick={props.onCancel} size="large" key="cancel">
+    <Button key="cancel" onClick={props.onCancel} size="large">
       {props.cancelText || "CANCEL"}
     </Button>
   ];

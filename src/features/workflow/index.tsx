@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { observer } from "mobx-react-lite";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import ReactFlow, {
   addEdge,
@@ -8,7 +9,6 @@ import ReactFlow, {
   MiniMap,
   useReactFlow
 } from "react-flow-renderer";
-import { observer } from "mobx-react-lite";
 
 import { useStore } from "@models/index";
 
@@ -647,6 +647,7 @@ export const Workflow = observer(() => {
   return (
     <>
       <ReactFlow
+        zoomOnDoubleClick={false}
         onContextMenu={onContextMenu}
         nodes={nodes}
         edges={edges}

@@ -9,7 +9,7 @@ export const WorkFlowPage = () => {
   return (
     <>
       <WorkflowBar />
-      <main className={s.main}>
+      <main onContextMenu={e => e.preventDefault()} className={s.main}>
         <ReactFlowProvider>
           <Workflow />
         </ReactFlowProvider>

@@ -3,7 +3,7 @@ class NavMenuActions {
   scrolled = false;
 
   get container() {
-    return document.getElementById("scroll-container");
+    return document.querySelector("#scroll-container");
   }
 
   save = () => {

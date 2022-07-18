@@ -1,6 +1,6 @@
-import { NavLink, useLocation } from "react-router-dom";
-import cn from "classnames";
 import { Menu } from "antd";
+import cn from "classnames";
+import { NavLink, useLocation } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
@@ -43,7 +43,7 @@ export const NavMenu = (props: NavMenuProps) => {
 
     if (!el.childs && el.link) {
       return (
-        <Item disabled={el.disabled} key={el.key}>
+        <Item key={el.key} disabled={el.disabled}>
           <NavLink
             className={isActive => (isActive ? "active" : "")}
             to={el.link}

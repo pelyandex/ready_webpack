@@ -1,7 +1,9 @@
-import { App } from "./app";
-import { StoreProvider, rootStore } from "../models";
 import "./style.css";
+
 import { Sprite } from "@shared/ui";
+
+import { rootStore, StoreProvider } from "../models";
+import { App } from "./app";
 
 export const Index = () => {
   return (

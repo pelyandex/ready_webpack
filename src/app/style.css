@@ -2,3 +2,12 @@ body {
   margin: 0;
   font-family: Roboto !important;
 }
+
+@media (max-width: 768px) {
+  #menu_item {
+    display: none;
+  }
+  .react-flow__minimap {
+    display: none;
+  }
+}

@@ -1,16 +1,17 @@
 import { Dropdown, DropDownProps } from "antd";
+import type { FC } from "react";
 import { createRef } from "react";
 
 import { Icon } from "@shared/ui";
 
 import s from "./styles.module.css";
 
-import type { FC } from "react";
-
 interface IActionsProps {
   onSelectOverlay: (key: string) => void;
   items: string[];
 }
+
+
 
 export const Actions: FC<IActionsProps> = ({ items, onSelectOverlay }) => {
   const ref = createRef<HTMLDivElement>();
@@ -37,7 +38,7 @@ export const Actions: FC<IActionsProps> = ({ items, onSelectOverlay }) => {
         overlay={<Overlay />}
         getPopupContainer={() => ref.current as HTMLDivElement}
         icon={<Icon width={15} height={15} icon="more" />}
-      ></Dropdown.Button>
+      />
     </div>
   );
 };

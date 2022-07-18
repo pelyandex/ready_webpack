@@ -28,7 +28,7 @@ const initialNodes = [
     id: "jupiter1.1",
     type: "jupiter",
     position: { x: 0, y: 0 },
-    data: { value: 123 }
+    data: { value: 124 }
   },
   {
     id: "jupiter1",
@@ -623,7 +623,7 @@ export const Workflow = observer(() => {
 
       const newEdges = edges.map((el, ind) => ({
         ...el,
-        animation: index === ind
+        animated: isError ? false : index === ind
       }));
 
       setNodes(newNodes);

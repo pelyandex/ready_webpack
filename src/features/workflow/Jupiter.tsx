@@ -2,6 +2,9 @@ import { Handle, Position } from "react-flow-renderer";
 
 import { Dropdown, Icon, Menu } from "@shared/ui";
 
+import { JupiterModal } from "./JupiterModal";
+import { useState } from "react";
+
 const menu = (
   <Menu
     items={[
@@ -30,9 +33,14 @@ const menu = (
 );
 
 export function Jupiter(data: any) {
-  let color = "black";
-  const { isRunning, isSuccess, isError } = data.data;
+  const [editorVisible, setEditorVisible] = useState(false);
 
+  let color = "black";
+
+  const {
+    selected,
+    data: { isRunning, isSuccess, isError, value }
+  } = data;
   if (isSuccess) {
     color = "green";
   }
@@ -44,12 +52,16 @@ export function Jupiter(data: any) {
     color = "red";
   }
 
+  const openEditor = () => {
+    setEditorVisible(!editorVisible)
+  }
+
   return (
     <>
       <Handle type="source" position={Position.Right} style={{ right: -10 }} />
       <Handle type="target" position={Position.Left} style={{ right: -10 }} />
 
-      <div onContextMenu={e => e.stopPropagation()}>
+      <div onDoubleClick={openEditor} onContextMenu={e => e.stopPropagation()}>
         <Dropdown overlay={menu} trigger={["contextMenu"]}>
           <div
             style={{
@@ -58,7 +70,9 @@ export function Jupiter(data: any) {
               display: "flex",
               alignItems: "center",
               flexDirection: "column",
-              color: isError ? "red" : "black"
+              color: isError ? "red" : "black",
+              outline: selected ? "1px dashed" : "none",
+              padding: 2
             }}
           >
             <span style={{ fontSize: 10 }}>Jupiter notebook</span>
@@ -72,11 +86,12 @@ export function Jupiter(data: any) {
                 inherit
               />
             </span>
-            <span style={{ fontSize: 7, marginTop: 10, textAlign: "center" }}>
-            Run custom python code
+            <span style={{ fontSize: 5, marginTop: 10, textAlign: "center" }}>
+              Run custom python code
             </span>
           </div>
         </Dropdown>
+        <JupiterModal visible={editorVisible} onChangeVisible={openEditor} />
       </div>
     </>
   );

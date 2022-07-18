@@ -32,7 +32,10 @@ const menu = (
 
 export function DataSource(data: any) {
   let color = "black";
-  const { isRunning, isSuccess, isError } = data.data;
+  const {
+    selected,
+    data: { isRunning, isSuccess, isError }
+  } = data;
 
   if (isSuccess) {
     color = "green";
@@ -60,7 +63,9 @@ export function DataSource(data: any) {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            color: isError ? "red" : "black"
+            color: isError ? "red" : "black",
+            outline: selected ? "1px dashed" : "none",
+            padding: 5
           }}
         >
           <span style={{ fontSize: 10 }}>Data Source</span>
@@ -76,7 +81,7 @@ export function DataSource(data: any) {
               inherit
             />
           </span>
-          <span style={{ fontSize: 7, marginTop: 10, textAlign: "center" }}>
+          <span style={{ fontSize: 5, marginTop: 10, textAlign: "center" }}>
             Provides source data such as dataframe or files
           </span>
         </div>

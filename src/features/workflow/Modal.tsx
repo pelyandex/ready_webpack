@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Icon, Input, Modal } from "@shared/ui";
+import { Input, Modal } from "@shared/ui";
 
 import s from "./modal.module.css";
 
@@ -9,49 +9,18 @@ const modules = [
     type: "saver",
     name: "Data Source",
     description: "Provides source data such as dataframe or files",
-    icon: (
-      <Icon
-        style={{
-          marginTop: "10"
-        }}
-        width={55}
-        height={55}
-        icon="data_source"
-        inherit
-      />
-    )
+    ports: [{ name: "OUT_0", description: "Output dataframe" }]
   },
   {
     type: "saver",
     name: "Data Saver",
     description: "Exports dataframe to selected database table",
-    icon: (
-      <Icon
-        style={{
-          marginTop: "10"
-        }}
-        width={55}
-        height={55}
-        icon="data_source"
-        inherit
-      />
-    )
+    ports: [{ name: "IN_0", description: "Input dataframe" }]
   },
   {
     type: "script",
     name: "Jupiter",
-    description: "Run custom python code",
-    icon: (
-      <Icon
-        style={{
-          marginTop: "10"
-        }}
-        width={55}
-        height={55}
-        icon="shape_other"
-        inherit
-      />
-    )
+    description: "Run custom python code"
   }
 ];
 
@@ -67,6 +36,7 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
 
   return (
     <Modal
+      destroyOnClose
       className={s.modal}
       centered
       onCancel={setVisible}
@@ -91,7 +61,7 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
             width: "70%"
           }}
         >
-          <span>Хранение данных</span>
+          <span>Data processing</span>
           <span>2</span>
         </div>
         <div
@@ -104,7 +74,7 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
             width: "70%"
           }}
         >
-          <span>Скрипты</span>
+          <span>Scripts</span>
           <span>1</span>
         </div>
       </div>
@@ -112,9 +82,20 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
         {filteredModules.map(el => {
           return (
             <div onClick={setVisible} key={el.name} className={s.card}>
-              <span>{el.name}</span>
-              {el.icon}
-              <span>{el.description}</span>
+              <span className={s.name}>{el.name}</span>
+              <span className={s.description}>{el.description}</span>
+              {el.ports && (
+                <div className={s.ports}>
+                  <h4>Ports:</h4>
+                  {el.ports?.map(el => (
+                    <div>
+                      <span style={{ color: "gray" }}>{el.name}</span>
+                      &nbsp;&nbsp;&nbsp;
+                      <span>{el.description}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}

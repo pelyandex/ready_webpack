@@ -63,13 +63,15 @@ const initialNodes = [
   {
     id: "jupiter6",
     type: "jupiter",
-    position: { x: 600, y: 0 },
+    position: { x: 0, y: 35 },
+    parentNode: "group2",
     data: { value: 123 }
   },
   {
     id: "jupiter7",
     type: "jupiter",
-    position: { x: 700, y: 0 },
+    parentNode: "group2",
+    position: { x: 100, y: 35 },
     data: { value: 123 }
   },
   {
@@ -485,6 +487,29 @@ const initialNodes = [
     type: "data_saver",
     position: { x: 900, y: 500 },
     data: { value: 123 }
+  },
+  {
+    id: "group1",
+    type: "group",
+    position: { x: 900, y: -35 },
+    data: { label: "asd" },
+    style: {
+      width: 200,
+      height: 140,
+      background: "rgba(100, 225, 68, 0.2)",
+      "z-index": "-1"
+    }
+  },
+  {
+    id: "group2",
+    type: "group",
+    position: { x: 600, y: -35 },
+    data: { label: "asd" },
+    style: {
+      width: 200,
+      height: 140,
+      background: "rgba(242, 169, 70, 0.2)"
+    }
   }
 ];
 

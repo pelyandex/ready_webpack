@@ -2,13 +2,40 @@ import { Cascader } from "antd";
 import { observer } from "mobx-react-lite";
 
 import {
+  DownOutlined,
   LeftCircleOutlined,
+  LeftOutlined,
   PlayCircleOutlined,
+  RightOutlined,
   StopOutlined
 } from "@ant-design/icons";
 import { useStore } from "@models/index";
+import { Dropdown, Menu } from "@shared/ui";
 
 import s from "./styles.module.css";
+
+const menu = (
+  <Menu
+    items={[
+      {
+        key: "1",
+        label: "Save as"
+      },
+      {
+        key: "2",
+        label: "Download"
+      },
+      {
+        key: "3",
+        label: "Save as Template"
+      },
+      {
+        key: "4",
+        label: "Create snapshot"
+      }
+    ]}
+  />
+);
 
 export const WorkflowBar = observer(() => {
   const { projectStatus, setProjectStatus } = useStore();
@@ -21,9 +48,25 @@ export const WorkflowBar = observer(() => {
 
   return (
     <header className={s.workflowBar}>
-      <div className={s.project}>
-        <LeftCircleOutlined />
+      <LeftOutlined />
 
+      <Dropdown overlay={menu}>
+        <span className={s.projectTitle}>
+          Test_Workflow
+          <DownOutlined />
+        </span>
+      </Dropdown>
+
+      {isRunning ? (
+        <StopOutlined className={s.icon} onClick={onClick} />
+      ) : (
+        <PlayCircleOutlined className={s.icon} onClick={onClick} />
+      )}
+
+      {/* <div className={s.project}>
+        <LeftCircleOutlined />
+         */}
+      {/* 
         <Cascader
           expandTrigger="hover"
           className={s.projectMenu}
@@ -63,8 +106,8 @@ export const WorkflowBar = observer(() => {
         </Cascader>
         <span id="menu_item" className={s.menuItem}>
           SETTINGS
-        </span>
-      </div>
+        </span>*/}
+      {/* </div>
       <div className={s.title}>
         <span className={s.dropdownText} onClick={e => e.preventDefault()}>
           workflow_test&nbsp;&nbsp;&nbsp;
@@ -73,8 +116,8 @@ export const WorkflowBar = observer(() => {
           ) : (
             <PlayCircleOutlined onClick={onClick} />
           )}
-        </span>
-      </div>
+        </span> */}
+      {/* </div> */}
     </header>
   );
 });

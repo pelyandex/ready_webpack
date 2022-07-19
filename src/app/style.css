@@ -11,3 +11,7 @@ body {
     display: none;
   }
 }
+
+.react-flow__node-jupiter {
+  z-index: 200 !important;
+}

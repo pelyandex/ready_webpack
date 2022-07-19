@@ -497,7 +497,7 @@ const initialNodes = [
       width: 200,
       height: 140,
       background: "rgba(100, 225, 68, 0.2)",
-      "z-index": "-1"
+      zIndex: 100
     }
   },
   {

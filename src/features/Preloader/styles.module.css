@@ -1,0 +1,31 @@
+.preloader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000000;
+}
+
+.block {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white !important;
+  padding: 15px;
+  & h1 {
+    color: white !important;
+    text-align: center;
+  }
+  & .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+  }
+}

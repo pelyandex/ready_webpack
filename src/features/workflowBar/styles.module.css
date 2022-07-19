@@ -1,4 +1,6 @@
 .workflowBar {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
   position: fixed;
   left: 0;
   top: 0;
@@ -20,8 +22,8 @@
     cursor: pointer;
   }
   & .projectTitle {
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 15px;
+    letter-spacing: 1.2px;
     opacity: 0.9;
     position: relative;
     &:hover {
@@ -35,13 +37,19 @@
   }
 }
 
-
-
 .icon {
   & svg {
     width: 20px;
     height: 20px;
   }
+}
+
+.on {
+  color: rgba(48, 202, 16, 8);
+}
+
+.off {
+  color: rgba(216, 6, 6, 8);
 }
 
 /* 

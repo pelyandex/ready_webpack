@@ -1,12 +1,9 @@
-import { Cascader } from "antd";
+import cn from "classnames";
 import { observer } from "mobx-react-lite";
 
 import {
-  DownOutlined,
-  LeftCircleOutlined,
   LeftOutlined,
   PlayCircleOutlined,
-  RightOutlined,
   StopOutlined
 } from "@ant-design/icons";
 import { useStore } from "@models/index";
@@ -53,14 +50,14 @@ export const WorkflowBar = observer(() => {
       <Dropdown overlay={menu}>
         <span className={s.projectTitle}>
           Test_Workflow
-          <DownOutlined />
+          {/* <DownOutlined /> */}
         </span>
       </Dropdown>
 
       {isRunning ? (
-        <StopOutlined className={s.icon} onClick={onClick} />
+        <StopOutlined className={cn(s.icon, s.off)} onClick={onClick} />
       ) : (
-        <PlayCircleOutlined className={s.icon} onClick={onClick} />
+        <PlayCircleOutlined className={cn(s.icon, s.on)} onClick={onClick} />
       )}
 
       {/* <div className={s.project}>

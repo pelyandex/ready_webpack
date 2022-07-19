@@ -14,8 +14,19 @@ body {
     width: 100% !important;
     border-radius: 0 !important;
   }
+
+  .react-flow__controls {
+    top: 65px !important;
+    left: 0px !important;
+    bottom: 0 !important;
+    height: 0 !important;
+  }
 }
 
 .react-flow__node-jupiter {
   z-index: 200 !important;
+}
+
+#root {
+  oveflow: hidden;
 }

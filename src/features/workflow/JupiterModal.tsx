@@ -2,6 +2,7 @@ import Editor from "@monaco-editor/react";
 import { Button, Modal } from "@shared/ui";
 
 export const JupiterModal = ({ visible, onChangeVisible }: any) => {
+  debugger;
   const Footer = [
     <Button key="run" size="large" type="primary">
       RUN

@@ -65,12 +65,14 @@ const initialNodes = [
     type: "jupiter",
     position: { x: 0, y: 35 },
     parentNode: "group2",
+    extent: "parent",
     data: { value: 123 }
   },
   {
     id: "jupiter7",
     type: "jupiter",
     parentNode: "group2",
+    extent: "parent",
     position: { x: 100, y: 35 },
     data: { value: 123 }
   },

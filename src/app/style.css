@@ -24,7 +24,7 @@ body {
 }
 
 .react-flow__node-jupiter {
-  z-index: 200 !important;
+  z-index: 1100 !important;
 }
 
 #root {

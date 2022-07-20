@@ -27,11 +27,6 @@
     &:hover {
       opacity: 1;
     }
-    & :global(.anticon-down) {
-      position: absolute;
-      right: -15px;
-      top: 35%;
-    }
   }
 }
 
@@ -39,6 +34,9 @@
   & svg {
     width: 20px;
     height: 20px;
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }
 

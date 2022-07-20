@@ -1,28 +1,2 @@
 .modal {
-  & :global(.ant-modal-content) {
-    /* background-color: var(--grey-color-1); */
-  }
-  & :global(.ant-modal-header) {
-    /* padding: 12px 24px;
-    background-color: var(--grey-color-3);
-    user-select: none; */
-
-    & :global(.ant-modal-title) {
-      /* font-size: 14px;
-      font-weight: bold; */
-    }
-  }
-  & :global(.ant-modal-close) {
-    & :global(.ant-modal-close-x) {
-      /* width: 24px;
-      height: 24px;
-      color: var(--icon-gray); */
-    }
-    /* top: -5px;
-    right: 10px; */
-  }
-
-  & :global(.ant-modal-footer > button) {
-    /* min-width: 120px; */
-  }
 }

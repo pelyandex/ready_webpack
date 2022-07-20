@@ -10,6 +10,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const path = require("path");
+const antdConfig = require("./config/antd-config.json");
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = process.env.NODE_ENV === "production";
@@ -107,6 +108,7 @@ const getModules = () => {
           loader: "less-loader",
           options: {
             lessOptions: {
+              modifyVars: antdConfig,
               javascriptEnabled: true
             }
           }
@@ -178,7 +180,6 @@ module.exports = {
     hot: true,
     headers: {
       "Access-Control-Allow-Origin": "*"
-    },
-    open: ["/"]
+    }
   }
 };

@@ -36,6 +36,7 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
 
   return (
     <Modal
+      bodyStyle={{ height: "80vh", background: "rgba(236, 236, 236, .3)" }}
       destroyOnClose
       className={s.modal}
       centered
@@ -53,7 +54,7 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
         <div
           onClick={() => setDirectory(directory === "saver" ? "" : "saver")}
           style={{
-            fontWeight: directory === "saver" ? "bold" : "normal",
+            color: directory === "saver" ? "rgba(48, 202, 16, 0.8)" : "black",
             marginTop: 20,
             cursor: "pointer",
             display: "flex",
@@ -67,7 +68,7 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
         <div
           onClick={() => setDirectory(directory === "script" ? "" : "script")}
           style={{
-            fontWeight: directory === "script" ? "bold" : "normal",
+            color: directory == "script" ? "rgba(48, 202, 16, 8)" : "black",
             cursor: "pointer",
             display: "flex",
             justifyContent: "space-between",
@@ -81,15 +82,18 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
       <div className={s.field}>
         {filteredModules.map(el => {
           return (
-            <div onClick={setVisible} key={el.name} className={s.card}>
-              <span className={s.name}>{el.name}</span>
-              <span className={s.description}>{el.description}</span>
+            <div key={el.name} onClick={setVisible} className={s.card}>
+              <div>
+                <div className={s.name}>{el.name}</div>
+                <div className={s.description}>{el.description}</div>
+              </div>
+
               {el.ports && (
                 <div className={s.ports}>
                   <h4>Ports:</h4>
-                  {el.ports?.map(el => (
+                  {el.ports.map(el => (
                     <div>
-                      <span style={{ color: "gray" }}>{el.name}</span>
+                      <span style={{ color: "gray" }}>{el.name}:</span>
                       &nbsp;&nbsp;&nbsp;
                       <span>{el.description}</span>
                     </div>

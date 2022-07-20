@@ -650,7 +650,16 @@ export const Workflow = observer(() => {
 
       const newEdges = edges.map((el, ind) => ({
         ...el,
-        animated: isError ? false : index === ind
+        animated: isError ? false : index === ind,
+        style: {
+          stroke: isError
+            ? false
+            : index === ind
+            ? "orange"
+            : index > ind
+            ? "green"
+            : "grey"
+        }
       }));
 
       setNodes(newNodes);

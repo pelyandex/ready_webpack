@@ -92,7 +92,7 @@ export const ModalWorkflow = ({ visible, setVisible }: any) => {
                 <div className={s.ports}>
                   <h4>Ports:</h4>
                   {el.ports.map(el => (
-                    <div>
+                    <div key={el.name}>
                       <span style={{ color: "gray" }}>{el.name}:</span>
                       &nbsp;&nbsp;&nbsp;
                       <span>{el.description}</span>

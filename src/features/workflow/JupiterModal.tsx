@@ -1,19 +1,18 @@
 import Editor from "@monaco-editor/react";
 import { Button, Modal } from "@shared/ui";
 
-const Footer = [
-  <Button key="run" size="large" type="primary">
-    RUN
-  </Button>,
-  <Button key="save" size="large" type="primary">
-    SAVE
-  </Button>,
-  <Button key="cancel" size="large">
-    CANCEL
-  </Button>
-];
-
 export const JupiterModal = ({ visible, onChangeVisible }: any) => {
+  const Footer = [
+    <Button key="run" size="large" type="primary">
+      RUN
+    </Button>,
+    <Button key="save" size="large" type="primary">
+      SAVE
+    </Button>,
+    <Button key="cancel" size="large">
+      CANCEL
+    </Button>
+  ];
   return (
     <Modal
       footer={Footer}

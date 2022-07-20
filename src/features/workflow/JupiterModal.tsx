@@ -21,13 +21,11 @@ export const JupiterModal = ({ visible, onChangeVisible }: any) => {
       visible={visible}
       onCancel={onChangeVisible}
     >
-      {visible && (
-        <Editor
-          height="60vh"
-          defaultLanguage="python"
-          defaultValue="// some comment"
-        />
-      )}
+      <Editor
+        height="60vh"
+        defaultLanguage="python"
+        defaultValue="// some comment"
+      />
     </Modal>
   );
 };

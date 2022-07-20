@@ -21,8 +21,7 @@
   }
   & .projectTitle {
     font-size: 15px;
-    letter-spacing: 1.2px;
-    opacity: 0.9;
+    opacity: 0.7;
     position: relative;
     font-weight: 500;
     &:hover {

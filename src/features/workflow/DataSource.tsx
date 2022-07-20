@@ -1,5 +1,5 @@
-import { Handle, Position } from "react-flow-renderer";
 import { createRef } from "react";
+import { Handle, Position } from "react-flow-renderer";
 
 import { Dropdown, Icon, Menu } from "@shared/ui";
 
@@ -56,7 +56,6 @@ export function DataSource(data: any) {
       <Dropdown destroyPopupOnHide overlay={menu} trigger={["contextMenu"]}>
         <div
           ref={ref}
-          onClick={e => e.stopPropagation()}
           style={{
             width: 80,
             height: 100,
@@ -68,9 +67,9 @@ export function DataSource(data: any) {
             padding: 5
           }}
         >
-          <span style={{ fontSize: 10 }}>Data Source</span>
-          <span style={{ fontSize: 8, color: "grey" }}>Spark</span>
-          <span style={{ color: color }}>
+          <span style={{ fontSize: 8 }}>Data Source</span>
+          <span style={{ fontSize: 6, color: "grey" }}>Spark</span>
+          <span style={{ color }}>
             <Icon
               style={{
                 marginTop: "10"

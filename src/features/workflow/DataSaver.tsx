@@ -35,7 +35,6 @@ export function DataSaver() {
       <Handle type="target" position={Position.Left} style={{ right: -10 }} />
       <Dropdown overlay={menu} trigger={["contextMenu"]}>
         <div
-          onClick={() => console.log(11)}
           style={{
             width: 80,
             height: 100,
@@ -44,8 +43,8 @@ export function DataSaver() {
             flexDirection: "column"
           }}
         >
-          <span style={{ fontSize: 10 }}>Data Saver</span>
-          <span style={{ fontSize: 8, color: "grey" }}>Spark</span>
+          <span style={{ fontSize: 8 }}>Data Saver</span>
+          <span style={{ fontSize: 6, color: "grey" }}>Spark</span>
           <Icon
             style={{ marginTop: "10" }}
             width={25}

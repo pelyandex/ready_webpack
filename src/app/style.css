@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Roboto !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 @media (max-width: 768px) {
@@ -29,4 +29,8 @@ body {
 
 #root {
   oveflow: hidden;
+}
+
+.react-flow__attribution {
+  display: none !important;
 }

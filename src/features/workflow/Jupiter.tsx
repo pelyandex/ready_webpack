@@ -75,8 +75,8 @@ export function Jupiter(data: any) {
               padding: 2
             }}
           >
-            <span style={{ fontSize: 10 }}>Jupiter notebook</span>
-            <span style={{ fontSize: 8, color: "grey" }}>Docker</span>
+            <span style={{ fontSize: 8 }}>Jupiter notebook</span>
+            <span style={{ fontSize: 6, color: "grey" }}>Docker</span>
             <span style={{ color }}>
               <Icon
                 style={{ marginTop: "10" }}
